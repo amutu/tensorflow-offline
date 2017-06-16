@@ -1,4 +1,4 @@
-#:/bin/sh
+#!/bin/sh
 
 install_dir="$(cd $(/usr/bin/dirname $0);pwd)"
 
