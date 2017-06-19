@@ -8,6 +8,7 @@
 * fix the build,do as
 > git clone https://github.com/amutu/tensorflow-offline.git  
 > cd tensorflow-offline  
+> git submodule update  
 > ./fix_offline_build.sh $tf $tp  
 
 * do the build
