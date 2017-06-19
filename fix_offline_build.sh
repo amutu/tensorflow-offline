@@ -5,10 +5,10 @@ install_dir="$(cd $(/usr/bin/dirname $0);pwd)"
 tensorflow_dir=$1
 third_package_dir=$2
 
-cp ${install_dir}/WORKSPACE ${tensorflow_dir}/
-cp ${install_dir}/configure ${tensorflow_dir}/
-cp ${install_dir}/workspace.bzl ${tensorflow_dir}/tensorflow/
+cd ${tensorflow_dir} && patch -p0 < ${install_dir}/tensorflow-port/files/patch-WORKSPACE
+cd ${tensorflow_dir} && patch -p0 < ${install_dir}/tensorflow-port/files/patch-tensorflow_workspace.bzl
 
+sed -i.bk "s#bazel \([cf]\)#echo comment bazel \1#g" ${tensorflow_dir}/configure
 sed -i.bk "s#tensorflow_third_party#${third_package_dir}#g" ${tensorflow_dir}/WORKSPACE
 sed -i.bk "s#tensorflow_third_party#${third_package_dir}#g" ${tensorflow_dir}/tensorflow/workspace.bzl
 
