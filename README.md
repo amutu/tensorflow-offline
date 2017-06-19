@@ -17,4 +17,4 @@
 > bazel-bin/tensorflow/tools/pip_package/build_pip_package  
 
 * note:
-test tensorflow-1.1.0 on FreeBSD without CUDA,openCL,XLA support.Linux or other Unix should work too.
+test tensorflow-1.2.0 on FreeBSD without CUDA,openCL,XLA support.Linux or other Unix should work too.
