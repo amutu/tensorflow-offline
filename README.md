@@ -1,4 +1,4 @@
-# tensorflow_offline
+# tensorflow-offline
 
 ## usage:
 
