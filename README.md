@@ -3,11 +3,11 @@
 ## usage:
 
 * download src
-> tensorflow src [tensorflow](https://github.com/tensorflow/tensorflow/releases) and offline third party package [tensorflow_third_party](https://github.com/amutu/tensorflow_third_party) and extract. The extracted directories are $tf and $tp, and must be absolute path.
+> tensorflow src [tensorflow](https://github.com/tensorflow/tensorflow/releases) and offline third party package [tensorflow_third_party](https://github.com/amutu/tensorflow_third_party/release) and extract. The extracted directories are $tf and $tp, and must be absolute path.
 
 * fix the build,do as
-> git clone https://github.com/amutu/tensorflow_offline.git  
-> cd tensorflow_offline  
+> git clone https://github.com/amutu/tensorflow-offline.git  
+> cd tensorflow-offline  
 > ./fix_offline_build.sh $tf $tp  
 
 * do the build
