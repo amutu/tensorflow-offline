@@ -2,12 +2,16 @@
 
 ## usage:
 
+* make sure the depends updated
+> such as bazel >= 0.5.0, python >= 2.7 and numpy installed.
+
 * download src
-> tensorflow src [tensorflow](https://github.com/tensorflow/tensorflow/releases) and offline third party package [tensorflow_third_party](https://github.com/amutu/tensorflow_third_party/release) and extract. The extracted directories are $tf and $tp, and must be absolute path.
+> tensorflow src [tensorflow](https://github.com/tensorflow/tensorflow/releases) and offline third party package [tensorflow_third_party](https://github.com/amutu/tensorflow_third_party/releases) and extract. The extracted directories are $tf and $tp, and must be absolute path.
 
 * fix the build,do as
 > git clone https://github.com/amutu/tensorflow-offline.git  
 > cd tensorflow-offline  
+> git submodule update  
 > ./fix_offline_build.sh $tf $tp  
 
 * do the build
@@ -16,4 +20,4 @@
 > bazel-bin/tensorflow/tools/pip_package/build_pip_package  
 
 * note:
-test tensorflow-1.1.0 on FreeBSD without CUDA,openCL,XLA support.Linux or other Unix should work too.
+test tensorflow-1.2.0 on FreeBSD without CUDA,openCL,XLA support.Linux or other Unix should work too.
